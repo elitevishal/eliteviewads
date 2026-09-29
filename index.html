@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EliteInsta Ads</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0d0d12;
+    padding: 10px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .wrap { max-width: 420px; margin: 0 auto; }
+  .ad-box {
+    background: #131318;
+    border: 1px solid #23232c;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+  }
+  .ad-250 { min-height: 258px; }
+  .ad-50  { min-height: 58px; }
+  .ad-60  { min-height: 68px; }
+  .ad-60 .fit { max-width: 100%; overflow: hidden; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ================================================
+       ELITEINSTA AD PAGE — Adsterra codes lage hain
+       ?slim URL ke saath khola jaye to sirf 320x50 dikhega
+       (voice list ke liye) — baaki me sab dikhenge
+       ================================================ -->
+
+  <!-- AD 1: 300x250 BADA BANNER (mode screen ke liye) -->
+  <div class="ad-box ad-250" id="ad-big">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : 'adsid',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highrevenueformat.com/713af95d3aa4dc362774a818e22fa34f/invoke.js"></script>
+  </div>
+
+  <!-- AD 2: 320x50 SLIM BANNER (voice list ke liye) -->
+  <div class="ad-box ad-50" id="ad-slim">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : 'adsid',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highrevenueformat.com/668eaed66b1056d9666f2bf3818e8f3c/invoke.js"></script>
+  </div>
+
+  <!-- AD 3: 468x60 WIDE BANNER (chhote phone pe side se crop hoga — normal hai) -->
+  <div class="ad-box ad-60" id="ad-wide">
+    <div class="fit">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : 'adsid',
+          'format' : 'iframe',
+          'height' : 60,
+          'width' : 468,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highrevenueformat.com/1d5a154fee02bbd8b568304234b9f24f/invoke.js"></script>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Voice list ke liye slim version: ?slim lagao to bada/wide ad chhup jayega
+  if (window.location.search.indexOf('slim') >= 0) {
+    document.getElementById('ad-big').style.display = 'none';
+    document.getElementById('ad-wide').style.display = 'none';
+  }
+</script>
+</body>
+</html>
